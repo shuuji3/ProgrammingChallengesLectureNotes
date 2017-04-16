@@ -1,0 +1,691 @@
+\documentclass{beamer}
+
+\input{../tools/beamerpreamble.tex}
+
+\title[GB21802]{GB21802 - プログラミングチャレンジ}
+\subtitle[]{Week 0 - イントロダクション}
+\author[Claus Aranha]{Claus Aranha\\{\footnotesize caranha\@@cs.tsukuba.ac.jp}}
+\institute{Department of Computer Science}
+\date{2017/4/14\\{\smaller(last updated: \today)}}
+
+\begin{document}
+
+\section{イントロダクション}
+\subsection{授業について}
+
+\begin{frame}
+\maketitle
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{まず初めに: 大切なお知らせ}
+
+  \begin{block}{Manaba ページ}
+    この授業のすべての講義ノートとお知らせは MANABA で行われます。
+    下の URL からアクセスしてください。
+    
+    \medskip
+    
+    \url{https://manaba.tsukuba.ac.jp/ct/course_781339}\\
+    登録コード: 8467527
+  \end{block}
+  \begin{exampleblock}{言語}
+    \begin{itemize}
+      \item 講義: 日本語
+      \item スライドと資料: 英語
+      \item 練習問題: 英語
+      \item 質問、メール、宿題: 好きな言語
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{講義担当について}
+  \begin{columns}
+    \column{0.4\textwidth}
+    \includegraphics[width=1\textwidth]{../img/pinhole}
+    \column{0.6\textwidth}
+    {\small
+    \begin{itemize}
+      \item \structure{名前:} Claus Aranha (アランニャ・クラウス);
+      \item \structure{出身国:} ブラジル;
+        
+        \medskip
+
+      \item \structure{研究領域:} 人工知能、遺伝的アルゴリズム、ディープラーニング
+      \item \structure{プログラミング言語:} Python、R
+      \item \structure{趣味:} ゲームプログラミング、ジオキャッシング、Twitter
+        Bots
+        
+        \medskip
+
+      \item \structure{twitter:} \href{http://www.twitter.com/caranha}{@caranha}
+      \item \structure{ウェブページ:}\\ {\smaller \url{http://conclave.cs.tsukuba.ac.jp}}
+    \end{itemize}
+    }
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{この講義で扱う対象は？}
+  
+  これまでに皆さんは、たくさんのプログラミングテクニックを学習してきたと思います...\\\hfill ...でも、ちゃんと使いこなせていますか？
+
+  \begin{block}{授業の基本指針: Learning by Practice}
+    \begin{itemize}
+      {\small
+    \item 毎週、いくつかの問題を解くことを求められます。
+    \item 問題を解くためには、最適な\structure{データ構造}と
+      \structure{アルゴリズム}を選択しなければなりません。
+    \item また、各問題には、 \alert{制限時間}と\alert{メモリ制限}が存在します。
+    \item アルゴリズムやテクニック、トリックについて講義します。
+      }
+    \end{itemize}
+  \end{block}
+
+  \begin{exampleblock}{授業の目的:}
+    プログラミングの能力やテクニックを磨き、
+    プログラミングに慣れ親しむこと。
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{このコースを受けるのにふさわしい人}
+  \begin{itemize}
+  \item \structure{プログラムを作るのが好きな人、プログラミングが楽しいと思っている人}
+
+    \smallskip
+    
+  \item プログラミングの理論はたくさん勉強したけれど、練習不足を感じている人。
+    
+    \smallskip
+
+  \item まだプログラムをたくさん書いた経験がない人
+
+    \smallskip
+
+  \item プログラムの効率について考えられるようになりたい人。
+
+    \smallskip
+
+  \item 記憶力よりスキルが重視される授業を受けたい人。
+
+    \smallskip
+
+  \item テクニカルな英語の練習がしたい人。
+
+    \smallskip
+
+  \item プログラミングコンテストに出場したい人。
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{この授業についての警告}
+  \begin{alertblock}{1- Heavy Workload}
+    \begin{itemize}
+    \item Challenges start easy, but end very hard;
+    \item Expect to use a few hours per week on homework;
+    \item Lots of debugging;
+
+      \bigskip
+
+    \item Hint: Do your homework early!
+    \end{itemize}
+  \end{alertblock}
+
+  \begin{alertblock}{2- 授業で使う言語}
+    \begin{itemize}
+    \item コースの資料はすべて英語で書かれています。
+    \item 特に重要なポイント: 宿題もすべて英語です。
+    \item ただし、提出するプログラムや質問は日本語でも大丈夫です。
+
+      \bigskip
+
+    \item この授業では、英語の練習もしてもらえたら嬉しいです！ :-)
+    \end{itemize}
+  \end{alertblock}
+
+\end{frame}
+
+\section{プログラミングチャレンジ}
+\subsection{例}
+
+\begin{frame}
+  \frametitle{``プログラミングチャレンジ''ってなに？}
+
+  プログラミングチャレンジとは、コンピュータプログラムを作ることで解くことができるパズルです。
+
+  \bigskip
+
+  チャレンジには、\structure{入力}と問題の  \structure{ルール}が書かれていて、
+  挑戦者は、\structure{正しい出力} を見つけるプログラムを書く必要があります。
+
+  \bigskip
+
+  例を見てみましょう。
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{チャレンジの一例: ``Relational Operator (関係演算子)'' (1)}
+
+  {\small
+  The challenges for this course are listed at the page:\\
+  {\smaller \url{http://conclave.cs.tsukuba.ac.jp/lecture/monitor.html}}
+
+  \begin{center}
+    \includegraphics[width=.7\textwidth]{../img/monitorpage}
+  \end{center}
+
+  Click on the title to go to the problem page.}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example Challenge: ``Relational Operator'' (2)}
+
+  Clicking on the title will take you to the problem page.
+  
+  \begin{center}
+    \includegraphics[width=.9\textwidth]{../img/relationaloperator}
+  \end{center}
+
+  Here you can read the problem and submit a solution.\\
+  (You will need an UVA account!)
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example Challenge: ``Relational Operator'' (3)}
+  
+  \begin{block}{Problem Description}
+    {\small 
+      Some operator checks about the relationship between two values,
+      these operators are called relational operators. Given two
+      numerical values, your job is just to find out the relationship
+      between them. That is (i) First one is greater than the second,
+      (ii) First one is less than the second or (iii) First and second
+      one is equal.
+    }
+  \end{block}
+  \begin{block}{Input}
+    {\small
+      First line is the number $t$ of tests ($t < 15$). Following t lines 
+      are two integers $a$ and $b$.
+    }
+  \end{block}
+  \begin{block}{Output}
+    {\small
+      For each line of input, print one line of output with '>','<' or '=', 
+      according to the relationship of $a$ and $b$.
+    }
+  \end{block}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+  \frametitle{Solving ``Relational Operator''}
+    
+\begin{block}{}
+{\smaller
+\begin{verbatim}
+// UVA 11172 - Relational Operator
+// Test if a is bigger, smaller or equal to b
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n; long a, b;
+
+    cin >> n;    
+    for (; n > 0; n--)
+    {
+        cin >> a >> b;
+        if (a > b) cout << ">\n";
+        if (a < b) cout << "<\n";
+        if (a == b) cout << "=\n";
+    }
+}
+\end{verbatim}}
+\end{block}
+\end{frame}
+
+\subsection{Submission}
+
+\begin{frame}
+  \frametitle{プログラムの提出の仕方} 
+  
+  After you finish your programs, \alert{and make sure they are
+    correct}, you can submit it.
+
+  \bigskip
+
+  Your weekly routine should have four steps:
+  \begin{enumerate}
+    \item Think about how to solve each problem;
+    \item Submit each problem to the UVA website, and check it is correct;
+    \item Prepare your MANABA package (code + comment file);
+    \item Submit your MANABA package to MANABA;
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Submitting the problem to UVA (1)}
+
+  {\small
+  UVA is an \structure{Automated Robotic Judge}. It will test your
+  program on a set of inputs, and check if the outputs are correct.
+
+  From the problem page, click on the \structure{submit} button. 
+  
+  \begin{center}
+    \includegraphics[width=.8\textwidth]{../img/submitpage}
+  \end{center}
+  
+  Select your language, choose the file, and press submit.\\
+  (You can use C, C++, Java, Python {\tiny and Pascal})}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Submitting the problem to UVA (2)}
+
+  {\small
+    After you submit the program, the judge will output one of the
+    following results: Accepted, Wrong Answer, Time Limit Exceeded,
+    Memory Limit Exceeded, Runtime Error, etc.
+    
+    \begin{center}
+      \includegraphics[width=.8\textwidth]{../img/submissionpage}
+    \end{center}
+
+    You can see this information on the ``my submissions'' page.
+  }
+\end{frame}
+
+\begin{frame}
+  \frametitle{Submission Statues:}
+  \begin{itemize}
+  \item \structure{Accepted}: Your program is correct!
+    Congratulations!
+  \item \structure{Wrong Answer}: Your program is incorrect. Debugging
+    time.
+  \item \structure{Time/Memory limit exceeded}: Your program is
+    inefficient. Think more.
+  \item \structure{Runtime Error}: Your program is crashing. To the
+    debugger!
+  \end{itemize}
+
+  \bigskip
+
+  We will see how to deal with some of these problems in the next class.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Back to the problem Monitor}
+
+  In the problem monitor page, you can check how many people solved
+  each problem, which problems you still have to solve, and the
+  deadlines.
+
+  \begin{center}
+    \includegraphics[width=.7\textwidth]{../img/monitorpage2}
+  \end{center}
+\end{frame}
+
+\subsection{Manaba Submission}
+\begin{frame}
+  \frametitle{Submitting the problem to MANABA}
+
+  {\small
+  After you finish the problems listed in the monitor, you need to
+  submit your source code and a comment file as a zip package to MANABA.}
+
+  \medskip
+
+  {\small
+  \begin{columns}
+    \column{0.3\textwidth}
+    \column{0.4\textwidth}
+    \begin{block}{s2015XXXXXX-weekYY.zip}
+      \begin{itemize}
+      \item problem1.cpp
+      \item problem2.cpp
+      \item problem5.cpp
+      \item kaisetsu.txt
+      \end{itemize}
+    \end{block}
+    \column{0.3\textwidth}
+  \end{columns}
+  }
+
+  \medskip
+  
+  \begin{alertblock}{Attention}
+  Submission to the UVA judge without a submission to MANABA will not
+  be accepted!
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Some warnings about Java:}
+
+  \begin{itemize}
+  \item All code must be in the same source file (can define many
+    classes in this file)
+
+    \medskip
+
+  \item All programs must begin in a static main method in a
+    \structure{Main} class.
+
+    \medskip
+
+  \item Do not use public classes. Even Main must be non public.
+
+    \medskip
+
+  \item Use Buffered I/O to avoid time limit exceeded.
+  \end{itemize}
+\end{frame}
+
+\section{Course Rules}
+\subsection{Course Structure}
+
+\begin{frame}
+    \frametitle{Outline}
+    
+    \begin{block}{Two classes per week}
+        \begin{itemize}   
+        \item Each week has a theme
+        \item Friday Class: Introduction
+        \item Monday Class: Problem Solving and Q\&A
+        \end{itemize}
+    \end{block}
+    
+    \begin{block}{Solving Problems}
+        \begin{itemize}
+        \item Every week there are 6-10 programming assignments;
+        \item Assignments follow the weekly theme;
+        \item Automatic Submission and Evaluation System;
+        \item Program Deadline is Thursday 23:59
+        \end{itemize}
+    \end{block}
+\end{frame}
+    
+\begin{frame}
+  \frametitle{Outline}
+  \begin{center}
+    \includegraphics[width=1\textwidth]{../img/classoutline}
+  \end{center}
+\end{frame}
+
+\subsection{Grading}
+
+\begin{frame}
+  \frametitle{Evaluation and Grading (1)}
+
+  Evaluation Criteria: \structure{Problems solved}, \structure{Code}
+  and \structure{Participation}
+  
+  \bigskip
+
+  Evaluation Process: Base Grade \structure{+Bonus} \alert{-Penalty}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Evaluation and Grading (2) -- Base Grade}
+
+  The \structure{Base Grade} is based on homework submissions to UVA.
+
+  \bigskip
+  
+  \begin{itemize}
+  \item \structure{C}: One problem per lecture, or $X_c$ problems total
+
+    \medskip
+
+  \item \structure{B}: Two problems per lecture, or $X_b$ problems total
+
+    \medskip
+
+  \item \structure{A}: Three problems per lecture, or $X_a$ problems total
+  \end{itemize}
+
+  \vfill
+
+  {\small
+  Parameters $X_{a,b,c}$ will be decided at a later date. \alert{Do not rely on this}}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Evaluation and Grading (3) -- Bonus and Penalty}
+  
+  {\small
+  A \structure{Bonus} or \structure{Penalty} will be added to the base grade.
+  \begin{itemize}
+    \item Bonus: grade one step up (C->B, B->A, A->A+)
+    \item Penalty: grade one step down (A+->A, B->C, \alert{C->C})
+  \end{itemize}
+  }
+
+  \medskip
+  \begin{exampleblock}{Bonus: Grade Up}
+    \begin{itemize}
+    \item Participation in class and MANABA
+    \item Submit corrections/suggestions to lecture notes
+    \item Consistently good Comment/Kaisetsu file
+    \item Best $N$ students in number of submissions
+    \end{itemize}
+  \end{exampleblock}
+  \begin{alertblock}{Penalty: Grade Down}
+    \begin{itemize}
+    \item More than 25\% problems submitted after the deadline
+    \end{itemize}
+  \end{alertblock}
+
+  \tiny{Parameter $N$ will be decided at a later date.}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Evaluation and Grading (4) -- comment/kaisetsu file}
+
+  When you submit your package every week, include a text file (no
+  Word!) with comments on each problem you tried to solve.
+    
+  \begin{exampleblock}{Example}
+    {\smaller
+\begin{verbatim}
+Name: Claus, ID: 98884735
+# Problem 1:
+To solve this problem, I sorted the input data, and 
+printed the input with the highest number of repeated 
+letters.
+
+# Problem 2: 
+I tried to solve this problem with brute force, but 
+the time limit was exceeded. I had to use DP on the 
+number of people instead.
+\end{verbatim}}
+  \end{exampleblock}
+
+  \bigskip
+  
+  Comments may be in Japanese. {\small (FILENAMES must be in romaji)}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Evaluation and Grading (5) -- about plagiarism}
+  
+  The assignments are \alert{individual}. Use your \structure{own
+    strength} to solve the programs.
+
+  \begin{exampleblock}{GOOD}
+    \begin{itemize}
+    \item Ask for ideas to your friends;
+    \item Ask for ideas in the MANABA forum;
+    \item Ask for help with a bug;
+    \end{itemize}
+  \end{exampleblock}
+
+  \begin{alertblock}{BAD}
+    \begin{itemize}
+    \item Copy a solution from the internet;
+    \item Copy a solution from your friends;
+    \item Give your code to a friend;
+    \end{itemize}
+  \end{alertblock}
+
+  Plagiarism will result in course failure, and possibly worse.
+\end{frame}
+
+\section{Resources}
+\subsection{Resources}
+
+% Class Links
+\begin{frame}
+  \frametitle{Useful Links}
+  \begin{itemize} 
+  \item
+    \href{https://manaba.tsukuba.ac.jp/ct/course_781339}
+         {\structure{\underline{Manaba Page}}}: All the class material
+         will be here. Access Code is: 8467527
+
+    \medskip
+
+  \item \href{https://uva.onlinejudge.org/}{\structure{\underline{UVA Online Judge}}}:
+    Use this page to submit your problems. \alert{Make an account and list the username on MANABA}
+
+    \medskip
+
+  \item \href{https://conclave.cs.tsukuba.ac.jp/lecture/monitor.html}{\structure{\underline{Problem Monitor}}}:
+    Use this page to check deadlines and weekly problems.
+
+    \medskip
+
+  \item
+    \href{https://www.github.com/caranha/ProgrammingChallengesLectureNotes}{\structure{\underline{Github
+          Repository}}}:
+    Working directory for lecture notes. Send me PR, issues!
+
+    \medskip
+    
+  \item
+    \href{https://www.udebug.com/}{\structure{\underline{uDebug}}}:
+    Web service that generates test inputs and test outputs for UVA
+    problems. Useful tool for this course.
+  \end{itemize}
+\end{frame}
+
+
+% Books
+% TODO: Add images for the books (week 0A)
+% TODO: Add japanese books
+\begin{frame}
+  \frametitle{Books}
+
+  \begin{itemize}
+  \item \structure{Main Book:} Competitive Programming, 3rd Edition
+    \href{http://cpbook.net/}{Link}
+    
+    \bigskip
+
+  \item \structure{Old Course Book:} Programming Challenges
+    \href{https://books.google.co.jp/books/about/Programming_Challenges.html?id=dNoLBwAAQBAJ&source=kp_cover&redir_esc=y}{Link}
+
+    \bigskip
+    
+  \item For suggestions of books in Japanese, please check the Manaba materials!
+  \end{itemize}
+\end{frame}
+
+% udebug
+\begin{frame}
+  \frametitle{uDebug Tool}
+
+  If you are having problems, the uDebug site offers, for many
+  problems in UVA, the correct set of outputs for any input you give.
+
+  \bigskip
+
+  \url{https://www.udebug.com/}
+
+  \bigskip
+
+  \begin{center}
+    \includegraphics[width=0.7\textwidth]{../img/udebug}
+  \end{center}
+\end{frame}
+
+% Cat stream
+\begin{frame}
+  \frametitle{If you are still having problems...}
+
+  Watch a cat stream to relax!
+
+  \bigskip
+
+  \begin{center}
+    \includegraphics[width=.6\textwidth]{../img/catstream}
+  \end{center}
+
+  \bigskip
+
+  \url{http://livestream.com/FosterKittenCam/}
+\end{frame}
+
+
+% Contact the professor (e-mail, twitter, webpage, room)
+\begin{frame}
+  \frametitle{Contact the professor}
+  \begin{itemize}
+  \item \structure{e-mail}: caranha@cs.tsukuba.ac.jp
+  \item \structure{website}: \url{http://conclave.cs.tsukuba.ac.jp}
+  \item \structure{twitter}: @caranha
+
+    \bigskip
+
+  \item \structure{Room}: SB1012\\
+    Best times to find me:
+    \begin{itemize}
+    \item Morning (9:00 -- 11:00): Monday, Wednesday, Friday
+    \item Evening (17:00 -- 19:00): Monday, Tuesday, Wednesday
+    \end{itemize}
+  \end{itemize}
+
+  \bigskip
+
+  Both English and Japanese are okay!
+\end{frame}
+
+
+% Do we still have time? Fill out the forms!
+% Do we still have time? Ask me questions!
+
+\begin{frame}
+  \frametitle{Do we still have some time?}
+
+  \begin{itemize}
+  \item Create an account on UVA (if you already have an account, you can use that)
+
+    \bigskip
+
+  \item Submit your account name to the MANABA
+
+    \bigskip
+
+  \item Ask any other questions you want to know!
+  \end{itemize}
+
+  \bigskip
+
+  \begin{center}
+    Thank you for today!
+  \end{center}
+\end{frame}
+
+\end{document}
