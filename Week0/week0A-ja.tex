@@ -259,7 +259,7 @@ int main()
 \begin{frame}
   \frametitle{プログラムの提出の仕方} 
   
-  After you finish your programs, \alert{and make sure they are
+  プログラムが完成したら、After you finish your programs, \alert{and make sure they are
     correct}, you can submit it.
 
   \bigskip
@@ -309,19 +309,17 @@ int main()
 \begin{frame}
   \frametitle{Submission Statues:}
   \begin{itemize}
-  \item \structure{Accepted}: Your program is correct!
-    Congratulations!
-  \item \structure{Wrong Answer}: Your program is incorrect. Debugging
-    time.
-  \item \structure{Time/Memory limit exceeded}: Your program is
-    inefficient. Think more.
-  \item \structure{Runtime Error}: Your program is crashing. To the
+  \item \structure{Accepted}: プログラムは正しいです！ おめでとう！
+  \item \structure{Wrong Answer}: プログラムには間違いがあります。デバッグの時間です。
+  \item \structure{Time/Memory limit exceeded}: プログラムの効率がよくありません。
+    もっとよく考えてみましょう。
+  \item \structure{Runtime Error}: プログラムがクラッシュしました。To the
     debugger!
   \end{itemize}
 
   \bigskip
 
-  We will see how to deal with some of these problems in the next class.
+  こうした問題の扱い方については、次回の授業で詳しく説明します。
 \end{frame}
 
 \begin{frame}
@@ -338,11 +336,11 @@ int main()
 
 \subsection{Manaba Submission}
 \begin{frame}
-  \frametitle{Submitting the problem to MANABA}
+  \frametitle{MANABA へのプログラムの提出}
 
   {\small
-  After you finish the problems listed in the monitor, you need to
-  submit your source code and a comment file as a zip package to MANABA.}
+    モニターに一覧された問題が解けたら、ソースコードとコメントファイルを
+    zip にパックして MANABA に提出しなければいけません。
 
   \medskip
 
@@ -364,54 +362,54 @@ int main()
 
   \medskip
   
-  \begin{alertblock}{Attention}
+  \begin{alertblock}{注意}
+    UVA にプログラムを提出したとしても、MANABA でも提出しなければいけません？？
   Submission to the UVA judge without a submission to MANABA will not
   be accepted!
   \end{alertblock}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Some warnings about Java:}
+  \frametitle{Java に関するいくつかの注意:}
 
   \begin{itemize}
-  \item All code must be in the same source file (can define many
-    classes in this file)
+  \item すべてのコードを、同じ1つのソースファイルに書く必要があります
+    (このファイルには、複数のクラスを書くことができます)。
 
     \medskip
 
-  \item All programs must begin in a static main method in a
-    \structure{Main} class.
+  \item すべてのプログラムは、\structure{Main} クラス内の static main メソッドで始まらなければなりません。
 
     \medskip
 
-  \item Do not use public classes. Even Main must be non public.
+  \item public クラスを使ってはいけません。Main クラスも non public でなければなりません。
 
     \medskip
 
-  \item Use Buffered I/O to avoid time limit exceeded.
+  \item 時間制限の超過を回避するために Buffered I/O を使ってください。
   \end{itemize}
 \end{frame}
 
-\section{Course Rules}
-\subsection{Course Structure}
+\section{授業のルール}
+\subsection{授業の構成}
 
 \begin{frame}
     \frametitle{Outline}
     
-    \begin{block}{Two classes per week}
+    \begin{block}{1週間に2回の授業}
         \begin{itemize}   
-        \item Each week has a theme
-        \item Friday Class: Introduction
-        \item Monday Class: Problem Solving and Q\&A
+        \item 週ごとに1つのテーマがあります。
+        \item 金曜日の授業: イントロダクション
+        \item 月曜日の授業: 問題を解く時間と Q\&A
         \end{itemize}
     \end{block}
     
     \begin{block}{Solving Problems}
         \begin{itemize}
-        \item Every week there are 6-10 programming assignments;
-        \item Assignments follow the weekly theme;
-        \item Automatic Submission and Evaluation System;
-        \item Program Deadline is Thursday 23:59
+        \item 週ごとに 6-10 のプログラミングの宿題が出されます。
+        \item 宿題は各週のテーマに沿ったものです。
+        \item 自動提出・評価システムを使います。
+        \item プログラムの締切は、毎週木曜日 23:59 です。
         \end{itemize}
     \end{block}
 \end{frame}
@@ -426,9 +424,9 @@ int main()
 \subsection{Grading}
 
 \begin{frame}
-  \frametitle{Evaluation and Grading (1)}
+  \frametitle{評価と成績 (1)}
 
-  Evaluation Criteria: \structure{Problems solved}, \structure{Code}
+  評価の条件: \structure{Problems solved}, \structure{Code}
   and \structure{Participation}
   
   \bigskip
@@ -437,67 +435,67 @@ int main()
 \end{frame}
 
 \begin{frame}
-  \frametitle{Evaluation and Grading (2) -- Base Grade}
+  \frametitle{評価と成績 (2) -- 基本の成績}
 
-  The \structure{Base Grade} is based on homework submissions to UVA.
+  \structure{基本の成績}は、UVA への宿題の提出状況に基づいて付けられます。
 
   \bigskip
   
   \begin{itemize}
-  \item \structure{C}: One problem per lecture, or $X_c$ problems total
+  \item \structure{C}: 授業ごとに問題を1つ解いた。, or $X_c$ problems total
 
     \medskip
 
-  \item \structure{B}: Two problems per lecture, or $X_b$ problems total
+  \item \structure{B}: 授業ごとに問題を2つ解いた。, or $X_b$ problems total
 
     \medskip
 
-  \item \structure{A}: Three problems per lecture, or $X_a$ problems total
+  \item \structure{A}: 授業ごとに問題を3つ解いた。, or $X_a$ problems total
   \end{itemize}
 
   \vfill
 
   {\small
-  Parameters $X_{a,b,c}$ will be decided at a later date. \alert{Do not rely on this}}
+    パラメータ $X_{a,b,c}$ は、後で決まりますが、\alert{このパラメータに頼らないように}}
 
 \end{frame}
 
 \begin{frame}
-  \frametitle{Evaluation and Grading (3) -- Bonus and Penalty}
+  \frametitle{評価と成績 (3) -- ボーナスとペナルティ}
   
   {\small
-  A \structure{Bonus} or \structure{Penalty} will be added to the base grade.
+  A \structure{ボーナス}または\structure{ペナルティ}が基本の成績に加えられます。
   \begin{itemize}
-    \item Bonus: grade one step up (C->B, B->A, A->A+)
-    \item Penalty: grade one step down (A+->A, B->C, \alert{C->C})
+    \item ボーナス: 成績が1段階アップ (C->B, B->A, A->A+)
+    \item ペナルティ: 成績が1段階ダウンgrade one step down (A+->A, B->C, \alert{C->C})
   \end{itemize}
   }
 
   \medskip
-  \begin{exampleblock}{Bonus: Grade Up}
+  \begin{exampleblock}{ボーナス: 成績アップ}
     \begin{itemize}
-    \item Participation in class and MANABA
-    \item Submit corrections/suggestions to lecture notes
-    \item Consistently good Comment/Kaisetsu file
-    \item Best $N$ students in number of submissions
+    \item 授業や MANABA に積極的に参加した
+    \item 授業ノートの訂正や提案を送った
+    \item 毎回、良いコメント/解説ファイルを提出した
+    \item 問題のクリア数が、上から $N$ 位以内だった
     \end{itemize}
   \end{exampleblock}
-  \begin{alertblock}{Penalty: Grade Down}
+  \begin{alertblock}{ベナルティ: 成績ダウン}
     \begin{itemize}
-    \item More than 25\% problems submitted after the deadline
+    \item 締め切りを過ぎてから提出した問題が 25\% 以上あった
     \end{itemize}
   \end{alertblock}
 
-  \tiny{Parameter $N$ will be decided at a later date.}
+  \tiny{パラメータ $N$ は、後日決めます。}
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Evaluation and Grading (4) -- comment/kaisetsu file}
+  \frametitle{評価と成績 (4) -- コメント/解説ファイル}
 
-  When you submit your package every week, include a text file (no
-  Word!) with comments on each problem you tried to solve.
+  毎週、パッケージを提出する際には、自分が解いた問題に対するコメントを書いた
+  テキストファイル (no Word!) を一緒に提出してください。
     
-  \begin{exampleblock}{Example}
+  \begin{exampleblock}{例}
     {\smaller
 \begin{verbatim}
 Name: Claus, ID: 98884735
@@ -515,69 +513,68 @@ number of people instead.
 
   \bigskip
   
-  Comments may be in Japanese. {\small (FILENAMES must be in romaji)}
+  コメントは、日本語でも構いません。{\small (ただし、FILENAMES は romaji にしてください)}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Evaluation and Grading (5) -- about plagiarism}
+  \frametitle{評価と成績 (5) -- about plagiarism}
   
-  The assignments are \alert{individual}. Use your \structure{own
-    strength} to solve the programs.
+  宿題は、\alert{個人で行う}ものです。問題に挑戦するときは、\structure{自分自身の力}を使ってください。
 
   \begin{exampleblock}{GOOD}
     \begin{itemize}
-    \item Ask for ideas to your friends;
-    \item Ask for ideas in the MANABA forum;
-    \item Ask for help with a bug;
+    \item 友だちにアイデアを尋ねる。
+    \item MANABA のフォーラムでアイデアを質問する。
+    \item バグの解決の手助けを求める。
     \end{itemize}
   \end{exampleblock}
 
   \begin{alertblock}{BAD}
     \begin{itemize}
-    \item Copy a solution from the internet;
-    \item Copy a solution from your friends;
-    \item Give your code to a friend;
+    \item インターネットから答えをコピーする。
+    \item 友だちの答えをコピーする。
+    \item 自分が書いたコードを友だちにあげる。
     \end{itemize}
   \end{alertblock}
 
+  不正行為？を行うと、授業の単位が落ちるだけでなく、もっと悪い結果になる可能性もあります。
   Plagiarism will result in course failure, and possibly worse.
 \end{frame}
 
-\section{Resources}
-\subsection{Resources}
+\section{参考資料}
+\subsection{参考資料}
 
 % Class Links
 \begin{frame}
-  \frametitle{Useful Links}
+  \frametitle{役に立つリンク}
   \begin{itemize} 
   \item
     \href{https://manaba.tsukuba.ac.jp/ct/course_781339}
-         {\structure{\underline{Manaba Page}}}: All the class material
-         will be here. Access Code is: 8467527
+         {\structure{\underline{Manaba Page}}}: 授業資料はすべてここにあります。
+         登録コード: 8467527
 
     \medskip
 
   \item \href{https://uva.onlinejudge.org/}{\structure{\underline{UVA Online Judge}}}:
-    Use this page to submit your problems. \alert{Make an account and list the username on MANABA}
+    問題を提出する時は、このページを使ってください。\alert{Make an account and list the username on MANABA}
 
     \medskip
 
   \item \href{https://conclave.cs.tsukuba.ac.jp/lecture/monitor.html}{\structure{\underline{Problem Monitor}}}:
-    Use this page to check deadlines and weekly problems.
+    このページで、締切と毎週の問題をチェックしてください。
 
     \medskip
 
   \item
-    \href{https://www.github.com/caranha/ProgrammingChallengesLectureNotes}{\structure{\underline{Github
-          Repository}}}:
-    Working directory for lecture notes. Send me PR, issues!
+    \href{https://www.github.com/caranha/ProgrammingChallengesLectureNotes}{\structure{\underline{Github リポジトリ}}}:
+    講義ノートの作業ディレクトリです。ぜひ PR や issues を送ってきてください！
 
     \medskip
     
   \item
     \href{https://www.udebug.com/}{\structure{\underline{uDebug}}}:
-    Web service that generates test inputs and test outputs for UVA
-    problems. Useful tool for this course.
+    UVA の問題に対して、入力と出力のテストを生成してくれるウェブサービスです。
+    この授業でも役に立ちます。
   \end{itemize}
 \end{frame}
 
@@ -586,7 +583,7 @@ number of people instead.
 % TODO: Add images for the books (week 0A)
 % TODO: Add japanese books
 \begin{frame}
-  \frametitle{Books}
+  \frametitle{書籍}
 
   \begin{itemize}
   \item \structure{Main Book:} Competitive Programming, 3rd Edition
@@ -623,9 +620,9 @@ number of people instead.
 
 % Cat stream
 \begin{frame}
-  \frametitle{If you are still having problems...}
+  \frametitle{それでもまだ、問題が解けない時は...}
 
-  Watch a cat stream to relax!
+  疲れたら、cat stream を観てリラックスしましょう！
 
   \bigskip
 
@@ -641,15 +638,15 @@ number of people instead.
 
 % Contact the professor (e-mail, twitter, webpage, room)
 \begin{frame}
-  \frametitle{Contact the professor}
+  \frametitle{先生とコンタクトを取るには}
   \begin{itemize}
-  \item \structure{e-mail}: caranha@cs.tsukuba.ac.jp
-  \item \structure{website}: \url{http://conclave.cs.tsukuba.ac.jp}
+  \item \structure{メール}: caranha@cs.tsukuba.ac.jp
+  \item \structure{ウェブサイト}: \url{http://conclave.cs.tsukuba.ac.jp}
   \item \structure{twitter}: @caranha
 
     \bigskip
 
-  \item \structure{Room}: SB1012\\
+  \item \structure{居室}: SB1012\\
     Best times to find me:
     \begin{itemize}
     \item Morning (9:00 -- 11:00): Monday, Wednesday, Friday
@@ -659,7 +656,7 @@ number of people instead.
 
   \bigskip
 
-  Both English and Japanese are okay!
+  英語も日本語も OK！
 \end{frame}
 
 
@@ -667,24 +664,24 @@ number of people instead.
 % Do we still have time? Ask me questions!
 
 \begin{frame}
-  \frametitle{Do we still have some time?}
+  \frametitle{まだ時間がある？}
 
   \begin{itemize}
-  \item Create an account on UVA (if you already have an account, you can use that)
+  \item UVA でアカウントを作成する (すでにアカウントを持っている場合は、それを使っても構いません)
 
     \bigskip
 
-  \item Submit your account name to the MANABA
+  \item アカウント名を MANABA に提出する
 
     \bigskip
 
-  \item Ask any other questions you want to know!
+  \item なにか知りたいことがあったら、質問してください！
   \end{itemize}
 
   \bigskip
 
   \begin{center}
-    Thank you for today!
+    今日はどうもありがとう！
   \end{center}
 \end{frame}
 
